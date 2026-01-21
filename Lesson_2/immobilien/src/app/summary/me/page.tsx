@@ -7,7 +7,6 @@ export default function Me() {
         Junior Frontend Developer
       </p>
 
-      {/* <div className="border-gray-200 my-4"></div> */}
       <hr className="border-gray-200 my-4"></hr>
 
       <ul className="list-disc list-inside text-gray-600 space-y-1 mb-6">
