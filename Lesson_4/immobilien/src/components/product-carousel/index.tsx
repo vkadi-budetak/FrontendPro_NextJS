@@ -38,6 +38,7 @@ export default function ProductCarousel({ images }: { images: string[] }) {
             <CarouselItem key={index}>
               <Card className="m-px">
                 <CardContent className="flex aspect-square items-center justify-center p-6">
+                  {/* Передаємо картинки */}
                   <Image
                     src={image}
                     width={100}
