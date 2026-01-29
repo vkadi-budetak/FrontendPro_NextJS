@@ -15,6 +15,20 @@
       "when": 1769590908685,
       "tag": "0001_dapper_greymalkin",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1769682967722,
+      "tag": "0002_volatile_the_captain",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1769687005661,
+      "tag": "0003_demonic_ricochet",
+      "breakpoints": true
     }
   ]
 }
