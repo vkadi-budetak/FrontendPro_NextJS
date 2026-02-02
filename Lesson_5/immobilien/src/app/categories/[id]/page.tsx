@@ -1,4 +1,5 @@
 import { Category } from "@/common/types/Category";
+import { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { title } from "process";
@@ -9,6 +10,19 @@ async function fetchCategories(id: string): Promise<Category> {
   });
   if (res.status === 404) notFound();
   return res.json();
+}
+
+//* Прописуємо metadata
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  return {
+    title: `Category ${id}`,
+    description: `Reading ${id} page`,
+  };
 }
 
 const CategoriePage = async ({

@@ -1,6 +1,7 @@
 import {
   boolean,
   integer,
+  numeric,
   pgTable,
   serial,
   text,
@@ -43,6 +44,18 @@ export const todos = pgTable("todos", {
   title: varchar({ length: 250 }).notNull(),
   description: varchar({ length: 250 }).notNull(),
   status: boolean().default(false),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  userId: integer("user_id")
+    .notNull()
+    .references(() => users.id, { onDelete: "cascade" }),
+});
+
+//? створення оголошення
+export const realEstates = pgTable("real_estates", {
+  id: integer().primaryKey().generatedAlwaysAsIdentity(),
+  title: varchar({ length: 250 }).notNull(),
+  address: varchar({ length: 250 }).notNull(),
+  price: numeric("price", { precision: 10, scale: 2 }).notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   userId: integer("user_id")
     .notNull()

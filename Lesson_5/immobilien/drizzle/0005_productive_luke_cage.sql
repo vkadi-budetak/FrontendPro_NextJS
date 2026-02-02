@@ -1,0 +1,1 @@
+ALTER TABLE "real_estates" DROP COLUMN "price";
