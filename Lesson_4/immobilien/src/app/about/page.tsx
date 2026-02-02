@@ -1,5 +1,13 @@
 import Link from "next/link";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About page",
+  description:
+    "Immobilien is copy of real Immobilien, but in fact it is application to learn next js",
+};
+
 export default function About() {
   return (
     <section>
